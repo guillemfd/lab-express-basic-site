@@ -36,30 +36,31 @@ footer {
 
 footer img {
     height: 70px;
-    padding-top: 50px;
+    padding: 50px 0px;
 }
 
 // -----------    PHOTOGALLERY -----------   PHOTOGALLERY -----------  PHOTOGALLERY -----------
 
 div > div > img {
     /* width: 100%; */
-    width: 300px;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 .row {
+    justify-content: space-around;
     display: flex;
     padding: 5px;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
 .column {
     flex: 25%;
-    padding: 5px;
 }
 
 .column img {
+    width: 300px;
     margin-top: 5px;
+    margin-left: 200px;
 }
 
 @media (max-width: 800px){
