@@ -1,25 +1,26 @@
 const express = require('express') //1. Importo express
 const app = express()
 
-app.use(express.static('public')); //Esto es necesario para indicarle a nuestra app que tenemos una carpeta de archivos estáticos en public
+app.use(express.static(__dirname + '/public')); //Esto es necesario para indicarle a nuestra app que tenemos una carpeta de archivos estáticos en public
 
 //ROUTES
 app.get('/', (request, response)=>{
-    response.sendFile(__dirname + '/Home.html');
+    response.sendFile(__dirname + '/views/Home.html');
   })
   
-  app.get('/About', (request, response)=>{
-    response.send('About')
-  })
-  
-  app.get('/Works', (request, response)=>{
-    response.send('Works')
-  })
+app.get('/About', (request, response)=>{
+  response.sendFile(__dirname + '/views/about.html')
+})
 
-  app.get('/PhotoGallery', (request, response)=>{
-    response.send('PhotoGallery')
-  })
+app.get('/Works', (request, response)=>{
+  response.sendFile(__dirname + '/views/works.html')
+})
 
-  app.listen(3000, ()=>{ //3. Activar el app.listen() para que mi servidor esté activo en un puerto específico
-    console.log('Servidor activo en el puerto 3000')
-  })
+app.get('/PhotoGallery', (request, response)=>{
+  response.sendFile(__dirname + '/views/photoGallery.html')
+})
+
+app.listen(3000, ()=>{ //3. Activar el app.listen() para que mi servidor esté activo en un puerto específico
+  console.log('Servidor activo en el puerto 3000')
+  console.log(__dirname)
+})  

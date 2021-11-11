@@ -41,11 +41,6 @@ footer img {
 
 // -----------    PHOTOGALLERY -----------   PHOTOGALLERY -----------  PHOTOGALLERY -----------
 
-div > div > img {
-    /* width: 100%; */
-    /* box-sizing: border-box; */
-}
-
 .row {
     justify-content: space-around;
     display: flex;
